@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="968,600" sizebox="4,4,4,4" caption="0,0,0,-1" mininfo="670,440">
+    <Font name="微软雅黑" size="14" bold="false" italic="false" />
+    <Font name="微软雅黑" size="14" bold="true" italic="false" />
+    <Font name="微软雅黑" size="10" bold="false" />
+    <Font name="微软雅黑" size="12" bold="false" />
+    <Font name="微软雅黑" size="13" bold="false" />
+    <VerticalLayout bkcolor="#FF070707">
+        <Caption height="40" />
+        <HorizontalLayout>
+            <Playlist width="225"/>
+            <VerticalLayout>
+                <!-- 在线直播地址设置 -->
+                <HorizontalLayout name="ctnURL" height="26" inset="0, 0, 1, 0">
+                    <Edit   name="editURL" text="请输入播放地址" font="3" textpadding="10,0,8,0" bordersize="1" focusbordercolor="#FF154B83" nativebkcolor="#FF0E0E0E" bkcolor="#FF0E0E0E" textcolor="#FF4B4F51" disabledtextcolor="#FFA7A6AA" />
+                    <Button name="btnRefresh" width="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;btn_refresh.png&apos; source=&apos;0,0,18,18&apos; dest='1,4,19,22' " hotimage="file=&apos;btn_refresh.png&apos; source=&apos;19,0,37,18&apos; dest='1,4,19,22' " pushedimage="file=&apos;btn_refresh.png&apos; source=&apos;38,0,56,18&apos; dest='1,4,19,22' " />
+                </HorizontalLayout>
+                <!-- 视频播放窗口 -->
+                <HorizontalLayout name="ctnClient"> <!-- 由于Layout控件都是Container的子类，所以Layout控件可以直接代替Container -->
+                    <VerticalLayout />
+                </HorizontalLayout>
+                <!-- 左边播放列表 -->
+                <PlayPanel height="95" />
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

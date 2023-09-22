@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="226,480">
+    <!-- DuiLib_Ultimate需要在控件前面导入默认样式 -->
+    <Include source="scrollbar.xml" />
+    <!-- 整个播放列表是个纵向布局 -->
+    <VerticalLayout name="ctnPlaylist" bkcolor="#FF111111">
+        <!-- 搜索栏 -->
+        <HorizontalLayout height="28">
+            <!-- 字体按钮(目前无效) -->
+            <Button name="btnFont" float="true" pos="3,0,0,0" width="27" height="27" align="center" 
+            normalimage="file='btn_font.png' source='0,0,27,27'" 
+            hotimage="file='btn_font.png' source='28,0,55,27'" 
+            pushedimage="file='btn_font.png' source='56,0,83,27'" />
+            <!-- 搜索节目输入框 -->
+            <Edit name="editSearch" text="请输入搜索关键词" float="true" pos="30,0,0,0" width="193" height="27"  font="1" textpadding="9,3,23,3" bordersize="1" 
+            focusbordercolor="#FF154B83" nativebkcolor="#FF0E0E0E" bkcolor="#FF242527" 
+            textcolor="#FFC8C8C8" disabledtextcolor="#FFA7A6AA" />
+            <!-- 搜索按钮 -->
+            <Button name="btnSearch" float="true" pos="201,0,0,0" width="23" height="27" align="center" tooltip="搜索" 
+            normalimage="file='btn_search.png' source='0,0,18,18' dest='0,4,18,22' " 
+            hotimage="file='btn_search.png' source='19,0,37,18' dest='0,4,18,22' " 
+            pushedimage="file='btn_search.png' source='38,0,56,18' dest='0,4,18,22' " />
+        </HorizontalLayout>
+        <!-- 大的节目单容器 -->
+		<TreeView name="treeview_item" childpadding="4" inset="4,0,3,0" bordersize="1" 
+        bordercolor="#FF2B2B2B" 
+        itemtextcolor="#FFC8C6CB" itemhottextcolor="#FFC8C6CB" selitemtextcolor="#FFC8C6CB" 
+        itemhotbkcolor="#FF1B1B1B" itemselectedbkcolor="#FF151C2C" vscrollbar="true" hscrollbar="true" >
+            <!-- 在线直播列表 -->
+			<TreeNode name="livePlayList" text="在线媒体" height="33" bkimage="treeview_header.png" 
+            itemattr="valign=&quot;vcenter&quot; font=&quot;1&quot; textpadding=&quot;12,0,0,0&quot;" 
+            folderattr="width=&quot;0&quot; float=&quot;true&quot;">
+                <!-- 直播选择框 -->
+    			<TreeNode name="livePlaySelecter" height="34" folderattr="width=&quot;0&quot; float=&quot;true&quot;">
+                    <!-- 下拉框选择列表 -->
+                    <Combo name="comboPlaylist" float="true" pos="12,7,0,0" valign="vcenter" width="100" height="20" dropboxsize="150,300" itemfont="0" 
+                    text="获取播放列表" scrollselect="false" wordbreak="false" endellipsis="true" textcolor="#FFC8C6CB" 
+                    itemalign="left" itemendellipsis="true" itemtextcolor="#FFC8C6CB" 
+                    itemselectedtextcolor="#FF2E2E2E" itemhottextcolor="#FFC8C6CB" itemtextpadding="3,3,3,3"
+                    itembkcolor="#FF2E2E2E" itemselectedbkcolor="#FFC8C6CB" itemhotbkcolor="#FF191919" 
+                    normalimage="file='combo_right.png' source='0,0,20,20' dest='80,0,100,20'" 
+                    hotimage="file='combo_right.png' source='21,0,41,20' dest='80,0,100,20' " >
+                    </Combo>
+                    <VerticalLayout width="108">
+                        <!-- 刷新当前选择的播放列表 -->
+                        <Button name="btnPlayMode" tooltip="刷新" float="true" pos="0,8,0,0" width="18" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='btn_play_mode.png' source='0,0,18,18'" hotimage="file='btn_play_mode.png' source='19,0,37,18'" pushedimage="file='btn_play_mode.png' source='38,0,56,18'" />
+                        <!-- 添加一个新的网络播放列表 -->
+                        <Button name="btnAdd" tooltip="添加" float="true" pos="21,8,0,0" width="18" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='btn_add.png' source='0,0,18,18'" hotimage="file='btn_add.png' source='19,0,37,18'" pushedimage="file='btn_add.png' source='38,0,56,18'" />
+                        <!-- 清空当前选择的网络列表 -->
+                        <Button name="btnDelete" tooltip="清空" float="true" pos="42,8,0,0" width="18" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='btn_delete.png' source='0,0,18,18'" hotimage="file='btn_delete.png' source='19,0,37,18'" pushedimage="file='btn_delete.png' source='38,0,56,18'" />
+                    </VerticalLayout>
+				</TreeNode>
+			</TreeNode>
+            <!-- 本地播放视图列表 -->
+            <TreeNode name="localPlayList" text="本地播放" height="33" 
+            bkimage="treeview_header.png" 
+            itemattr="valign=&quot;vcenter&quot; font=&quot;1&quot; textpadding=&quot;12,0,0,0&quot;" 
+            folderattr="width=&quot;0&quot; float=&quot;true&quot;">
+                <!-- 测试列表结束 -->
+			</TreeNode>
+		</TreeView>
+    </VerticalLayout>
+</Window>

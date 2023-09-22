@@ -1,0 +1,16 @@
+{
+    "netlist":[
+        {
+            "title":"YanG Gather",
+            "neturl":"https://ghproxy.com/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u"
+        },
+        {
+            "title":"测试列表",
+            "neturl":"https://guihet.com/download/livetv/24k/netlist.txt"
+        },
+        {
+            "title":"虎牙M3U",
+            "neturl":"http://epg.51zmt.top:8000/huya.m3u"
+        }
+    ]
+}

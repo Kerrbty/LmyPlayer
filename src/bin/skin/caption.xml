@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="854,40">
+    <!-- 水平布局 -->
+    <HorizontalLayout name="ctnCaption" bkimage="caption_bk.png" bkcolor="#FF0E1A2F" bkcolor2="#FF060606">
+        <!-- 左边图标和标题栏(居中) -->
+        <VerticalLayout width="40">
+            <!-- 图标按钮 -->
+            <Button name="btnMenu" float="true" pos="10,7,0,0" width="38" height="26" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='btn_menu.png' source='0,0,38,26'" hotimage="file='btn_menu.png' source='117,0,155,26'" pushedimage="file='btn_menu.png' source='78,0,116,26'" focusedimage="file='btn_menu.png' source='39,0,77,26'" />
+        </VerticalLayout>
+        <!-- 加一个垂直布局，把两边的布局靠边 -->
+        <VerticalLayout>
+            <!-- 标题是变长，如果放在图标一起，会被限制在该布局的width下 -->
+            <Text name="PlayerName" text="LmyPlayer播放器" float="true" pos="5,15,0,0" width="400" height="26" textcolor="#FFB7DBFB" font="1" align="left" wordbreak="false" endellipsis="true" />
+        </VerticalLayout>
+        <!-- 右边按钮布局 -->
+        <VerticalLayout width="162" height="40">
+            <!-- 最小化按钮 -->
+            <Button name="minbtn" tooltip="最小化" 
+            float="true" pos="69,3,0,0" width="27" height="31" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+            bkimage="file='btn_minmax.png' source='45,0,60,15' dest='6,8,21,23' " 
+            hotimage="file='btn_style_minmax.png' source='27,0,54,30'" 
+            pushedimage="file='btn_style_minmax.png' source='54,0,81,30'" />
+            <!-- 最大化按钮 -->
+            <Button name="maxbtn" tooltip="最大化" 
+            float="true" pos="97,3,0,0" width="27" height="31" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+            bkimage="file='btn_minmax.png' source='60,0,75,15' dest='6,8,21,23' " 
+            hotimage="file='btn_style_minmax.png' source='27,0,54,30'" 
+            pushedimage="file='btn_style_minmax.png' source='54,0,81,30'" />
+            <!-- 还原按钮 -->
+            <Button name="restorebtn" tooltip="还原" visible="false" 
+            float="true" pos="97,3,0,0" width="27" height="31" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+            bkimage="file='btn_minmax.png' source='75,0,90,15' dest='6,8,21,23' " 
+            hotimage="file='btn_style_minmax.png' source='27,0,54,30'" 
+            pushedimage="file='btn_style_minmax.png' source='54,0,81,30'" />
+            <!-- 关闭按钮 -->
+            <Button name="closebtn" tooltip="关闭" 
+            float="true" pos="125,3,0,0" width="36" height="31" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+            bkimage="file='btn_minmax.png' source='90,0,105,15' dest='11,8,26,23' " 
+            hotimage="file='btn_style_close.png' source='36,0,72,30'" 
+            pushedimage="file='btn_style_close.png' source='72,0,108,30'" />
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>
